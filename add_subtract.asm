@@ -35,4 +35,18 @@ li $v0, 5
 syscall
 move $t2, $v0
 
+li $v0, 4
+la $a0, msg4
+syscall
+
+sub $t3, $t0, $t1
+add $t3, $t3, $t2
+addi $t3, $t3, -12
+
+li $v0, 1
+move $a0, $t3
+syscall
+
 .end main
+
+
