@@ -12,7 +12,7 @@ res:   .asciiz "The temperature in fahrenheit is: "
 
 main:
 
-lui $s0, 0x1001     # get base address
+lui $s0, 0x1001     # get base addressl
 lw $s1, 0($s0)      # get celsius temp
 lb $t0, 8($s0)      # get 9
 lb $t1, 9($s0)      # get 5
