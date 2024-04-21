@@ -1,9 +1,9 @@
 .data
 
-msg1: asciiz "Enter some value for x followed by enter: "
-msg2: asciiz "Enter some value for y followed by enter: "
-msg3: asciiz "Enter some value for z followed by enter: "
-msg4: asciiz "Result of x-y+z-3 is "
+msg1: .asciiz "Enter some value for x followed by enter: "
+msg2: .asciiz "\nEnter some value for y followed by enter: "
+msg3: .asciiz "\nEnter some value for z followed by enter: "
+msg4: .asciiz "\nResult of x-y+z-3 is "
 
 .text
 .globl main
@@ -41,12 +41,13 @@ syscall
 
 sub $t3, $t0, $t1
 add $t3, $t3, $t2
-addi $t3, $t3, -12
+addi $t3, $t3, -3
 
 li $v0, 1
 move $a0, $t3
 syscall
 
+jr $ra
 .end main
 
 
