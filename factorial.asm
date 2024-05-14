@@ -1,7 +1,7 @@
 .data
 
-    msg1: .asciiz "FACTORIAL CALCULATOR\n\nEnter integer: "
-    msg2: .asciiz "FACTORIAL OF THE GIVEN NO IS "
+    msg1: .asciiz "\n\nFACTORIAL CALCULATOR\nEnter integer: "
+    msg2: .asciiz "\nFACTORIAL OF THE GIVEN NO IS "
     error_msg: .asciiz "\n\nOnly enter integers between 0 and 12!"
 
 .text

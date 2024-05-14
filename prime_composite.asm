@@ -36,6 +36,7 @@ main:
         mfhi $t3                        # store remainder
         beq $t3, $0, composite_label    # if it is a factor then we have more than 2 factors
         addi $t1, $t1, 1                # increment iterator
+        j loop
 
         
     prime_label:
