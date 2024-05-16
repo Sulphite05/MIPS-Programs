@@ -43,7 +43,13 @@ main:
     syscall
     move $a3, $v0
 
+addi $sp, $sp, -4
+sw $ra, 0($sp)
+
 jal average
+
+lw $ra, 0($sp)
+addi $sp, $sp, 4
 
 jr $ra
 .end main
