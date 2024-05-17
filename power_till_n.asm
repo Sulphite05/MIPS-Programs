@@ -43,8 +43,6 @@ main:
     jr $ra
     
 
-
-
 calc_power:
 
     addi $sp, $sp, -12                      # pushing saved reg
