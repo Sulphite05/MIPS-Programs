@@ -34,7 +34,6 @@ average:
 
     jr $ra
 
-
 main:
 
     li $v0, 4           # print msg
@@ -76,8 +75,6 @@ main:
     li $v0, 1           # take integer input         
     move $a0, $v1
     syscall
-
-
 
 jr $ra
 .end main

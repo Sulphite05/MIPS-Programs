@@ -40,8 +40,7 @@ main:
     move $a0, $v1
     syscall
 
-    jr $ra
-    
+    jr $ra    
 
 calc_power:
 
