@@ -1,7 +1,8 @@
 .data
-    msg1: .asciiz "Enter the base: "
+    msg1: .asciiz "\nEnter the base: "
     msg2: .asciiz "Enter the power: "
     msg3: .asciiz "The answer is: "
+    msg4: .asciiz "Power should be positive!"
 
 .text
 .globl main
@@ -24,6 +25,16 @@ main:
     syscall
     move $a2, $v0
 
+    slti $s0, $a2, 0
+    beq $s0, $0, here
+
+    li $v0, 4           # print msg4
+    la $a0, msg4
+    syscall
+
+    j main
+
+here:
     addi $sp, $sp, -4
     sw $ra, 0($sp)
 
