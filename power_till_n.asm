@@ -2,7 +2,7 @@
     msg1: .asciiz "\nEnter the base: "
     msg2: .asciiz "Enter the power: "
     msg3: .asciiz "The answer is: "
-    msg4: .asciiz "Power should be positive!"
+    msg4: .asciiz "Power should be positive!\n"
 
 .text
 .globl main
