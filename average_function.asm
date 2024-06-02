@@ -11,9 +11,9 @@
 average:
 
     addi $sp, $sp, -12
-    sw $t0, 0($sp)
-    sw $t0, 4($sp)
-    sw $t0, 8($sp)
+    sw $s0, 0($sp)
+    sw $s1, 4($sp)
+    sw $s2, 8($sp)
 
     add $s0, $a1, $a2
     add $s0, $s0, $a3
@@ -27,9 +27,9 @@ average:
     div $s0, $s1
     mflo $v1
 
-    lw $t0, 0($sp)
-    lw $t0, 4($sp)
-    lw $t0, 8($sp)
+    lw $s0, 0($sp)
+    lw $s1, 4($sp)
+    lw $s2, 8($sp)
     addi $sp, $sp, 12
 
     jr $ra
