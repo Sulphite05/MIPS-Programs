@@ -36,11 +36,11 @@ main:
 
 here:
     addi $sp, $sp, -4
-    sw $ra, 0($sp)
+    sw $ra, 0($sp)      # pushing ra on stack
 
     jal calc_power
 
-    lw $ra, 0($sp)
+    lw $ra, 0($sp)      # popping ra from stack
     addi $sp, $sp, 4
 
     li $v0, 4           # print msg3
