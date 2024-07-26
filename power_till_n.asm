@@ -36,7 +36,7 @@ main:
 
 here:
     addi $sp, $sp, -4
-    sw $ra, 0($sp)      # pushing ra on stack
+    sw $ra, 0($sp)      # pushing ra on stack because it will get overwritten by jal
 
     jal calc_power
 
